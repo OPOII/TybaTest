@@ -6,7 +6,7 @@ import { AppService } from './app.service';
 import { enviroments } from './envinronments';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
-import { RestaurantService } from './restaurant/restaurant.service';
+import { RestaurantModule } from './restaurant/restaurant.module';
 
 @Module({
   imports: [
@@ -24,8 +24,10 @@ import { RestaurantService } from './restaurant/restaurant.service';
     UserModule,
 
     AuthModule,
+
+    RestaurantModule,
   ],
   controllers: [AppController],
-  providers: [AppService, RestaurantService],
+  providers: [AppService],
 })
 export class AppModule {}
